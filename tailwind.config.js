@@ -19,19 +19,16 @@ module.exports = {
         "2xl": "6rem",
       },
     },
-    colors: {
-      primary: "#0F0E17",
-      secondary: "#FF8906",
-      tertiary: "#E53170",
-    },
     extend: {
+      colors: {
+        primary: "#0F0E17",
+        secondary: "#FF8906",
+        tertiary: "#E53170",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-      fontFamily: {
-        sans: ["Poppins", ...defaultTheme.fontFamily.sans],
       },
     },
   },

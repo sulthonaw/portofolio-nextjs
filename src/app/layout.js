@@ -1,9 +1,11 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import Head from "next/head";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "400", "600", "900"],
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -13,8 +15,39 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <Navbar />
+        <div className="absolute -top-32 -z-50 mx-auto w-full overflow-x-hidden">
+          <svg
+            width="789"
+            height="570"
+            viewBox="0 0 789 570"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="mx-auto w-full"
+          >
+            <rect
+              y="-182"
+              width="789"
+              height="752"
+              rx="100"
+              fill="url(#paint0_radial_102_164)"
+            />
+            <defs>
+              <radialGradient
+                id="paint0_radial_102_164"
+                cx="0"
+                cy="0"
+                r="1"
+                gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(394.5 194) rotate(90) scale(376 394.5)"
+              >
+                <stop stop-color="#E1EF88" stop-opacity="0.11" />
+                <stop offset="1" stop-opacity="0" />
+              </radialGradient>
+            </defs>
+          </svg>
+        </div>
         <main>{children}</main>
       </body>
     </html>
