@@ -4,6 +4,7 @@ import {
   HandThumbUpIcon,
   BookmarkIcon,
 } from "@heroicons/react/24/outline";
+import Twitter from "@/components/Twitter";
 
 export default function Home() {
   const array = Array.from({ length: 3 });
@@ -107,37 +108,7 @@ export default function Home() {
       </section>
 
       <section className="container grid grid-cols-12 gap-x-5 py-20">
-        <article className="col-span-8 flex w-full flex-col justify-center rounded-3xl bg-white px-8 py-6 text-slate-900">
-          <div className="flex items-center justify-between ">
-            <div className="flex items-center gap-x-3">
-              <div className="w-max rounded-full bg-secondary p-3">
-                <Image
-                  src={"/vector-male.png"}
-                  alt="vector male"
-                  width={40}
-                  height={40}
-                />
-              </div>
-              <div>
-                <h1 className="font-semibold">Uthonn</h1>
-                <p className="opacity-60">@sulthonaw</p>
-              </div>
-            </div>
-            <div>
-              <button className="rounded-full bg-sky-500 px-8 py-2 font-semibold text-white">
-                Follow
-              </button>
-            </div>
-          </div>
-          <p className=" my-5 ms-4">
-            Hi, I am 18 years old. And I am an intern at MejaKita as a front-end
-          </p>
-          <div className="ms-4 flex gap-x-5">
-            <HandThumbUpIcon className="h-6 w-6 stroke-slate-600" />
-            <ChatBubbleLeftEllipsisIcon className="h-6 w-6 stroke-slate-600" />
-            <BookmarkIcon className="h-6 w-6 stroke-slate-600" />
-          </div>
-        </article>
+        <Twitter />
         <div className="col-span-2">
           <div className="mx-auto flex h-full w-max flex-col justify-between gap-1 [&>div]:w-max [&>div]:rounded-3xl [&>div]:bg-secondary [&>div]:p-4">
             <div>
