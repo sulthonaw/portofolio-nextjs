@@ -6,7 +6,20 @@ import {
 } from "@heroicons/react/24/outline";
 
 export default function Home() {
-  const portofolios = Array.from({ length: 3 });
+  const array = Array.from({ length: 3 });
+  const portofolios = [
+    "html.png",
+    "css.png",
+    "javascript.png",
+    "tailwind.png",
+    "sass.png",
+    "php.png",
+    "csharp.png",
+    "dotnet.png",
+    "nodejs.png",
+    "react.png",
+  ];
+
   return (
     <>
       <section className="container relative flex flex-wrap items-center justify-between gap-x-5 gap-y-32 py-20">
@@ -46,19 +59,19 @@ export default function Home() {
             />
             <div className="absolute left-3 top-3 flex items-center gap-x-3 rounded-full border border-secondary bg-secondary/50 px-3 py-1 backdrop-blur">
               <div className="h-3 w-3 rounded-full bg-tertiary"></div>
-              <p className="text-slate-900 text-sm">
+              <p className="text-sm text-slate-900">
                 currently in an internship
               </p>
             </div>
           </div>
-          <article className="bg-white flex items-center justify-between gap-x-4 rounded-3xl px-5 py-4">
-            <p className="text-slate-600 text-sm sm:text-base">
+          <article className="flex items-center justify-between gap-x-4 rounded-3xl bg-white px-5 py-4">
+            <p className="text-sm text-slate-600 sm:text-base">
               “Semua Manusia di Bumi Bingung, Gak Bingung Kalau Udah di Surga”{" "}
-              <span className="text-slate-900 font-semibold">- aldi taher</span>
+              <span className="font-semibold text-slate-900">- aldi taher</span>
             </p>
             <div>
               <div className="rounded-full bg-secondary p-3">
-                <ChatBubbleLeftEllipsisIcon className="text-slate-900 h-7 w-7" />
+                <ChatBubbleLeftEllipsisIcon className="h-7 w-7 text-slate-900" />
               </div>
             </div>
           </article>
@@ -94,7 +107,7 @@ export default function Home() {
       </section>
 
       <section className="container grid grid-cols-12 gap-x-5 py-20">
-        <article className="bg-white text-slate-900 col-span-8 flex w-full flex-col justify-center rounded-3xl px-8 py-6">
+        <article className="col-span-8 flex w-full flex-col justify-center rounded-3xl bg-white px-8 py-6 text-slate-900">
           <div className="flex items-center justify-between ">
             <div className="flex items-center gap-x-3">
               <div className="w-max rounded-full bg-secondary p-3">
@@ -111,7 +124,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <button className="bg-sky-500 text-white rounded-full px-8 py-2 font-semibold">
+              <button className="rounded-full bg-sky-500 px-8 py-2 font-semibold text-white">
                 Follow
               </button>
             </div>
@@ -120,9 +133,9 @@ export default function Home() {
             Hi, I am 18 years old. And I am an intern at MejaKita as a front-end
           </p>
           <div className="ms-4 flex gap-x-5">
-            <HandThumbUpIcon className="stroke-slate-600 h-6 w-6" />
-            <ChatBubbleLeftEllipsisIcon className="stroke-slate-600 h-6 w-6" />
-            <BookmarkIcon className="stroke-slate-600 h-6 w-6" />
+            <HandThumbUpIcon className="h-6 w-6 stroke-slate-600" />
+            <ChatBubbleLeftEllipsisIcon className="h-6 w-6 stroke-slate-600" />
+            <BookmarkIcon className="h-6 w-6 stroke-slate-600" />
           </div>
         </article>
         <div className="col-span-2">
@@ -190,7 +203,7 @@ export default function Home() {
 
         <section>
           <div className="my-10 grid grid-cols-12 gap-x-4">
-            {portofolios.map((_, index) => (
+            {array.map((_, index) => (
               <div key={index} className="relative col-span-4 h-60">
                 <Image
                   src={"/portofolio.png"}
@@ -210,6 +223,20 @@ export default function Home() {
           <h2 className="my-4 text-center">
             technology that has been learned or used
           </h2>
+
+          <section className="flex flex-wrap items-center justify-center gap-5">
+            {portofolios.map((item, index) => (
+              <div key={index} className="p-2">
+                <Image
+                  width={100}
+                  height={100}
+                  src={`/logo/${item}`}
+                  alt={item}
+                  className="w-16"
+                />
+              </div>
+            ))}
+          </section>
         </section>
       </section>
     </>
